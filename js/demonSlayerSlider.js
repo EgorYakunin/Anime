@@ -15,7 +15,7 @@ nextBtn.addEventListener('click', () => {
     sliderItems[0].style.display = 'none';
 
     const iterator = 0;
-    slider.innerHTML += `<div class="item"><a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/0${iterator}.mp4" id="six">${iterator}</a></div>`;
+    slider.innerHTML += `<div class="item"><a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/${iterator}.mp4" id="six">${iterator}</a></div>`;
 
 });
 

@@ -210,10 +210,11 @@ video {
 	
 }
 
-.slider-line a {
+.slider-line p {
 	text-decoration: none;
 	color: #EBEBEB;
 	padding: 20px;
+	cursor: pointer;
 }
 
  
