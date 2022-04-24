@@ -1,0 +1,52 @@
+a {
+	text-decoration: none; 
+}
+body{
+	margin: 0;
+	background-color: #EBEBEB;
+}
+
+.home{
+	color: #fff;
+}
+
+.container{
+	width: 80%;
+	margin: 0px auto;
+}
+
+header {
+	background: #0a6379;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+
+.logo{
+	display: flex;
+	align-items: center;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+}
+
+.nav-links:hover {
+	/*text-decoration: underline;*/
+	/*font-weight: bold;*/
+	color: lightgrey;
+}
+
+#menu {
+	display: flex;
+}
+
+.logo div {
+	margin-left: 45px;
+}
