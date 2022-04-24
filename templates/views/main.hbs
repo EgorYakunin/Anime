@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+
+    <title>Смотреть Аниме онлайн бесплатно</title>
+    <link rel="shortcut icon" href="./img/icon.png" type="image/png">
+</head>
+
+<body>
+{{>header}}
+    <input class="search" placeholder="Поиск аниме" type="text">
+
+
+    <section class="poster_second">
+
+        {{#each anime as |a key|}}
+            <div class="poster_block">
+                <a href="./anime/{{a.counter}}">
+                    <img src="/img/{{a.counter}}.png" alt="" class="poster_img">
+                </a>
+                <p class="eng">
+                </p>
+                <a href="./anime/{{a.counter}}">
+                    <p>{{a.title}}</p>
+                </a>
+
+            </div>
+        {{/each}}
+
+
+
+    </section>
+
+
+
+    <footer>Все права защищены</footer>
+</body>
+
+</html>

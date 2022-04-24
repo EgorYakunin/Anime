@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+    <script src="/js/demonSlayerSlider.js" defer></script>
+    <title>{{data.title}}</title>
+
+</head>
+
+<body>
+{{>header}}
+
+    <section class="INFO">
+
+        <div class="content">
+            <div class="choise">
+                <img src="/img/{{data.counter}}.png">
+                <div class="option">
+
+                    <p class="watch choice-btn">
+                        Смотреть онлайн
+                    </p>
+
+                    <p class="write choice-btn">
+                        Написать комментарий
+                    </p>
+
+                    <p class="add-to-list choice-btn">
+                        Добавить в список
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="all-info">
+
+                <div class="info">
+                    <h1 class="Name">
+                        {{data.title}}
+                    </h1>
+                    <p class="other-name">
+                        {{#each data.otherNames as |value key|}}
+                            {{value}} <br>
+                        {{/each}}
+                    </p>
+                </div>
+                <div class="line">
+
+                </div>
+                <div class="main-info">
+                    <p class="information">
+                        Тип <br> Эпизоды <br> Статус <br> Жанр <br> Первоисточник <br> Сезон <br> Выпуск <br> Студия
+                        <br> Рейтинг MPAA <br> Возрастные ограничения <br> Длительность <br> Озвучка <br> Снят по манге
+                        <br> Главные герои
+                    </p>
+                    <p class="information2">
+                        <a href="">{{data.type}}</a> <br>{{data.episodes}}<br> <a href=""> Вышел </a> <br>{{#each data.ganres as |value key| }}
+                        <a href="#">{{value}}</a>,
+                        {{/each}}
+                        <br>{{data.origin}}<br> {{data.season}}<br> {{data.released}} <br>
+                        {{data.studio}} <br> {{data.rating}} <br> {{data.ageLimits}}+ <br> {{data.duration}} ~ серия <br>{{#each data.voiceActing as |value key| }}
+                        <a href="#">{{value}}</a>,
+                        {{/each}}
+<br> {{data.manga}} <br> Дзэницу Агацума (озвучивает
+                        Хиро Симоно) <br> Иносукэ Хасибира (озвучивает Ёсицугу Мацуока) <br> Тандзиро Камадо (озвучивает
+                        Нацуки Ханаэ) <br> Нэдзуко Камадо (озвучивает Акари Кито) <br> Тэнгэн Удзуи (озвучивает Кацуюки
+                        Кониси)
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="history">
+            <p>
+                {{data.description}}
+            </p>
+        </div>
+    </section>
+
+    <section class="WATCH">
+        <div class="Prosmotr">
+
+            <video src="./Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/01.mp4" controls
+                id="one"></video>
+
+            <div class="background">
+
+                <div class="voice-acting">
+
+                    <p class="active-btn">
+                        Озвучка
+                    </p>
+                    <p class="active-btn">
+                        Плеер
+
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="slider">
+            <div class="slider-line">
+
+                <div class="item">
+                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/01.mp4" id="1">1</a>
+                </div>
+
+                <div class="item">
+                    <p id="2">2</p>
+                </div>
+
+                <div class="item">
+                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/03.mp4" id="3">3</a>
+                </div>
+
+                <div class="item">
+                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/04.mp4"
+                        id="four">4</a>
+                </div>
+
+                <div class="item">
+                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/05.mp4"
+                        id="five">5</a>
+                </div>
+
+                <!-- <div class="item"><a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/06.mp4" id="six">6</a></div>
+				<div class="item">
+					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/07.mp4" id="seven">7</a>
+				</div>
+				<div class="item">
+					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/08.mp4" id="eight">8</a>
+				</div>
+				<div class="item"> 
+					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/09.mp4" id="nine">9</a>
+				</div>
+				<div class="item">
+					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/10.mp4" id="ten">10</a>
+				</div>
+				<div class="item">
+					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/11.mp4" id="eleven">11</a>
+				</div> -->
+
+            </div>
+        </div>
+        <button class="button-slider-prev">
+            < </button>
+                <button class="button-slider-next"> > </button>
+
+    </section>
+
+    <input class="comments" placeholder="Оставьте комментарий" type="text">
+
+</body>
+
+</html>
