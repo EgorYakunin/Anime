@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/demonSlayerSlider.js" defer></script>
+
+    <title>Смотреть Аниме онлайн бесплатно</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png">
+</head>
+
+<body>
+{{>header}}
+<div class="container">
+    <div class="GANRES add-to">
+
+        <a href="/genres/Демоны">Демоны</a>
+        <a href="/genres/Экшен">Экшен</a>
+        <a href="/genres/Исторический">Исторический</a>
+        <a href="/genres/Сёнэн">Сёнэн</a>
+        <a href="/genres/Сверхъестественное">Сверхъестественное</a>
+        <a href="/genres/Супер сила">Супер сила</a>
+        <a href="/genres/Фэнтези">Фэнтези</a>
+        <a href="/genres/Драма">Драма</a>
+        <a href="/genres/Комедия">Комедия</a>
+        <a href="/genres/Повседневность">Повседневность</a>
+        <a href="/genres/Школа">Школа</a>
+        <a href="/genres/Военное">Военное</a>
+        <a href="/genres/Спорт">Спорт</a>
+
+    </div>
+</div>
+    
+    
+    <section class="poster_second">
+
+        {{#each anime as |a key|}}
+            <div class="poster_block">
+                <a href="/anime/{{a.counter}}">
+                    <img src="/img/{{a.counter}}.png" alt="" class="poster_img">
+                </a>
+                <p class="eng">
+                </p>
+                <a href="./anime/{{a.counter}}">
+                    <p class="Name-Space">{{a.title}}</p>
+                </a>
+
+            </div>
+        {{/each}}
+
+
+
+    </section>
+
+
+
+    <footer>Все права защищены</footer>
+</body>
+
+</html>

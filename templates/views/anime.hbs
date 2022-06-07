@@ -22,16 +22,20 @@
                 <img src="/img/{{data.counter}}.png">
                 <div class="option">
 
-                    <p class="watch choice-btn">
-                        Смотреть онлайн
-                    </p>
+                    <p class="watch choice-btn"> <a href="#yakor">Смотреть онлайн</a></p>
 
-                    <p class="write choice-btn">
-                        Написать комментарий
-                    </p>
+                    <p class="write choice-btn"> <a href="#kommen" > Написать комментарий</a></p>
 
                     <p class="add-to-list choice-btn">
                         Добавить в список
+                        
+                        <div class="add-to">
+                            <a href="">Просмотрено</a>
+                            <a href="">Смотрю</a> 
+                            <a href="">В желанном</a> 
+                            <a href="">Заброшено</a> 
+                        </div>
+                       
                     </p>
 
                 </div>
@@ -60,17 +64,14 @@
                         <br> Главные герои
                     </p>
                     <p class="information2">
-                        <a href="">{{data.type}}</a> <br>{{data.episodes}}<br> <a href=""> Вышел </a> <br>{{#each data.ganres as |value key| }}
+                        <a href="">{{data.type}}</a> <br>{{data.episodes}}<br> <a href="">{{data.status}}</a> <br>{{#each data.ganres as |value key| }}
                         <a href="#">{{value}}</a>,
                         {{/each}}
                         <br>{{data.origin}}<br> {{data.season}}<br> {{data.released}} <br>
-                        {{data.studio}} <br> {{data.rating}} <br> {{data.ageLimits}}+ <br> {{data.duration}} ~ серия <br>{{#each data.voiceActing as |value key| }}
-                        <a href="#">{{value}}</a>,
-                        {{/each}}
-<br> {{data.manga}} <br> Дзэницу Агацума (озвучивает
-                        Хиро Симоно) <br> Иносукэ Хасибира (озвучивает Ёсицугу Мацуока) <br> Тандзиро Камадо (озвучивает
-                        Нацуки Ханаэ) <br> Нэдзуко Камадо (озвучивает Акари Кито) <br> Тэнгэн Удзуи (озвучивает Кацуюки
-                        Кониси)
+                        {{data.studio}} <br> {{data.rating}} <br> {{data.ageLimits}} <br> {{data.duration}}  <br>{{#each data.voiceActing as |value key| }}
+                        <a href="#">{{value}}</a>,{{/each}} <br> {{data.manga}} <br> {{#each data.mainCaracters as |value key|}} 
+                        {{value}} <br>
+                        {{/each}} <br>
                     </p>
                 </div>
 
@@ -86,11 +87,22 @@
     </section>
 
     <section class="WATCH">
-        <div class="Prosmotr">
+        <div class="hav">
+            
+            <div class="Prosmotr"> <a name="yakor"></a> 
+                <video src="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/1.mp4" controls id="one" id ="vid"></video>
+            </div>
+            <div class="ban">
+                <div class="slider">
+                    <div class="slider-line"></div>
+                </div>
 
-            <video src="./Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/01.mp4" controls
-                id="one"></video>
-
+                <button class="button-slider-prev"> < </button>
+                <button class="button-slider-next"> > </button>
+            </div>
+            
+           
+        </div>
             <div class="background">
 
                 <div class="voice-acting">
@@ -100,65 +112,15 @@
                     </p>
                     <p class="active-btn">
                         Плеер
-
                     </p>
                 </div>
 
             </div>
 
-
-        </div>
-        <div class="slider">
-            <div class="slider-line">
-
-                <div class="item">
-                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/01.mp4" id="1">1</a>
-                </div>
-
-                <div class="item">
-                    <p id="2">2</p>
-                </div>
-
-                <div class="item">
-                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/03.mp4" id="3">3</a>
-                </div>
-
-                <div class="item">
-                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/04.mp4"
-                        id="four">4</a>
-                </div>
-
-                <div class="item">
-                    <a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/05.mp4"
-                        id="five">5</a>
-                </div>
-
-                <!-- <div class="item"><a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/06.mp4" id="six">6</a></div>
-				<div class="item">
-					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/07.mp4" id="seven">7</a>
-				</div>
-				<div class="item">
-					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/08.mp4" id="eight">8</a>
-				</div>
-				<div class="item"> 
-					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/09.mp4" id="nine">9</a>
-				</div>
-				<div class="item">
-					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/10.mp4" id="ten">10</a>
-				</div>
-				<div class="item">
-					<a href="/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/11.mp4" id="eleven">11</a>
-				</div> -->
-
-            </div>
-        </div>
-        <button class="button-slider-prev">
-            < </button>
-                <button class="button-slider-next"> > </button>
-
+        
     </section>
 
-    <input class="comments" placeholder="Оставьте комментарий" type="text">
+    <input class="comments" placeholder="Оставьте комментарий" type="text"> <a name="kommen"></a>
 
 </body>
 

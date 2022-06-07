@@ -1,4 +1,5 @@
 import { ObjectId } from "bson";
+import { WithId } from "mongodb";
 import { db } from "../controllers/DB_controller";
 
 interface Anim {
@@ -7,6 +8,7 @@ interface Anim {
     otherNames: string[];
     type: string;
     episodes: number;
+    status: string;
     ganres: string[];
     origin: string;
     season: string;
@@ -27,6 +29,7 @@ class Anime implements Anim {
     otherNames;
     type;
     episodes;
+    status;
     ganres;
     origin;
     season;
@@ -46,6 +49,7 @@ class Anime implements Anim {
         this.otherNames = data.otherNames;
         this.type = data.type;
         this.episodes = data.episodes;
+        this.status = data.status;
         this.ganres = data.ganres;
         this.origin = data.origin;
         this.season = data.origin;
@@ -79,9 +83,21 @@ class Anime implements Anim {
         return returnValue;
     }
 
+    static getAnimeByGanre = async (ganre: string) => {
+        const allAnime = await db.read_many('anime', {});
+        
+        let returnValue: any = [];
+        allAnime?.forEach((e) => {
+            if(e.ganres.includes(ganre))
+                returnValue.push(e);
+        });
+
+        return returnValue;
+    }
+
     static getRandomAnime = async () => {
         // 0 --> 4
-        const randomNumber: string = Math.floor(Math.random() * 5) + 1 + '';
+        const randomNumber: string = Math.floor(Math.random() * 16) + 1 + '';
 
         const returnValue = await db.read_one('anime', { counter: randomNumber });
         return returnValue;

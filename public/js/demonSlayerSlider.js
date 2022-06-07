@@ -19,7 +19,7 @@ const updateSlider = () => {
     sliderItems = document.querySelectorAll('.item');
     sliderItems.forEach((e) => {
         e.addEventListener('click', () => {
-            const baseStr = './Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/';
+            const baseStr = '/Смотреть/Kimetsu no Yaiba - Yuukaku-hen - AniLibria.TV [WEBRip 1080p]/';
             video.src = baseStr + `${e.children[0].id}.mp4`;
         })
     })
@@ -53,3 +53,21 @@ prevBtn.addEventListener('click', () => {
     }
     render(links);
 });
+
+
+
+
+const btn = document.querySelector('.add-to-list')
+const btn2 = document.querySelector('.add-to')
+let btnstate = false
+btn.addEventListener('click', () => {
+    if(!btnstate) {
+        btn2.style.display = 'block' ;
+        btnstate = true
+    }
+    else {
+        btn2.style.display = 'none';
+        btnstate = false
+    }
+        
+})

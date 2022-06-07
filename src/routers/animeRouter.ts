@@ -19,7 +19,14 @@ animeRouter.get('/anime', async (req: Request, res: Response) => {
 animeRouter.get('/anime/:id', async (req: Request, res: Response) => {
     const data = await Anime.getAnimeByCounter(req.params.id);
 
-    res.render('anime', {data});
+    res.render('anime', { data });
+});
+
+animeRouter.get('/genres/:ganre', async (req: Request, res: Response) => {
+    const data = await Anime.getAnimeByGanre(req.params.ganre);
+
+
+    res.render('genres', { anime: data });
 });
 
 animeRouter.get('/anime-random', async (req: Request, res: Response) => {

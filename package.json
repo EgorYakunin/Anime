@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "start": "node ./build/server.js",
+    "build": "tsc",
     "tsc": "npx tsc -w",
     "dev": "npx nodemon ./build/server.js"
   },

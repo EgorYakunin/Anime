@@ -38,8 +38,6 @@ header .container {
 }
 
 .nav-links:hover {
-	/*text-decoration: underline;*/
-	/*font-weight: bold;*/
 	color: lightgrey;
 }
 

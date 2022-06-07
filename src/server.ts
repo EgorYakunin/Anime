@@ -20,7 +20,7 @@ hbs.registerPartials(partialsPath)
 app.use(animeRouter);
 
 app.get('', (req: Request, res: Response) => {
-    res.render('test');
+    res.redirect('/anime');
 });
 
 app.get('/*', async (req: Request, res: Response) => {

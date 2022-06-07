@@ -17,8 +17,13 @@ body{
 }
 
 .container{
-	width: 80%;
-	margin: 0px auto;
+	width: 90%;
+	margin: auto;
+}
+
+.Name-Space {
+	margin: 10PX auto;
+	width: 212px;
 }
 
 header {
@@ -82,7 +87,6 @@ header .container {
 .poster_block p{
 	color: #000;
 	text-align: left;
-	margin-left: 50px;
 }
 
 .poster_block a:hover p{
@@ -109,4 +113,49 @@ header .container {
 
 .eng{
 	font-size:small;
+}
+
+.GANRES a {
+	
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: lightgray;
+}
+
+.choice-btn {
+	padding: 8px 12px;
+	border-radius: 5px;
+	background-color: rgb(227, 227, 227);
+	text-decoration: none;
+}
+
+
+.add-to a {
+	text-decoration: none;
+	color: black;
+	display: grid;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: lightgray;
+}
+
+.add-to a:hover {
+	text-decoration: underline;
+}
+
+.add-to-list:hover {
+	cursor: pointer;
+}
+
+.GANRES a:hover {
+	text-decoration: underline;
+}
+
+.GANRES {
+	margin-top: 10px;
+	display: flex;
 }
